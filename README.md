@@ -1,3 +1,6 @@
+[![Build
+Status](https://travis-ci.org/LAS-IT/formstack-api.svg)](https://travis-ci.org/LAS-IT/formstack-api)
+
 # Formstack::Api
 
 TODO: Write a gem description
