@@ -3,7 +3,6 @@ require_relative '../lib/formstack/api'
 RSpec.describe Formstack::API do
 
   let(:access_token) { ACCESS_TOKEN }
-  let(:copy_form_id) { COPY_FORM_ID }
   let(:invalid_form_id) { 1234 }
   let(:inaccessible_form_id) { INACCESSIBLE_FORM_ID }
   let(:delete_submission_form) { DELETE_SUBMISSION_FORM }
@@ -46,7 +45,7 @@ RSpec.describe Formstack::API do
 
   describe '#form_details', :vcr do
     it 'reads a form name' do
-      form = wrapper.form_details(copy_form_id)
+      form = wrapper.form_details(submit_form_id)
       expect(form['name']).to eq('Test Form')
     end
 
@@ -69,8 +68,8 @@ RSpec.describe Formstack::API do
 
   describe '#copy_form', :vcr do
     it 'adds COPY at the end of the form name' do
-      form = wrapper.form_details(copy_form_id)
-      copied_form = wrapper.copy_form(copy_form_id)
+      form = wrapper.form_details(submit_form_id)
+      copied_form = wrapper.copy_form(submit_form_id)
       expect(copied_form['name']).to match(/^#{form['name']} - COPY/)
     end
 
@@ -141,8 +140,8 @@ RSpec.describe Formstack::API do
     end
 
     it 'raises an error if page number is not working' do
-      page1 = wrapper.form_submissions(submit_form_id, '', '', '', [], [], 1, 1)
-      page2 = wrapper.form_submissions(submit_form_id, '', '', '', [], [], 2, 1)
+      page1 = wrapper.form_submissions(submit_form_id, '', '', '', [], [], 1, 1, 'DESC')
+      page2 = wrapper.form_submissions(submit_form_id, '', '', '', [], [], 2, 1, 'DESC')
 
       expect(page1).not_to eq(page2)
     end

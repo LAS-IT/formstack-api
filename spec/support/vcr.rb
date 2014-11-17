@@ -16,7 +16,7 @@ VCR.configure do |c|
     c.cassette_library_dir = 'spec/vcr'
     c.hook_into :webmock # or :fakeweb
     c.filter_sensitive_data('<ACCESS_TOKEN>') { ACCESS_TOKEN }
-    c.filter_sensitive_data('<FORM_ID>') { COPY_FORM_ID }
+    c.filter_sensitive_data('<FORM_ID>') { SUBMIT_FORM_ID }
     c.filter_sensitive_data('<INACCESSIBLE_FORM_ID>') { INACCESSIBLE_FORM_ID }
     c.filter_sensitive_data('<SUBMISSION_DETAILS_ID>') { SUBMISSION_DETAILS_ID }
     c.filter_sensitive_data('<SUBMISSION_DETAILS_FORM_ID>') { SUBMISSION_DETAILS_FORM_ID }
