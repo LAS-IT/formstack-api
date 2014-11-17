@@ -1,4 +1,5 @@
 require_relative '../lib/formstack/api'
+require "base64"
 
 RSpec.describe Formstack::API do
 
@@ -7,6 +8,9 @@ RSpec.describe Formstack::API do
   let(:inaccessible_form_id) { INACCESSIBLE_FORM_ID }
   let(:delete_submission_form) { DELETE_SUBMISSION_FORM }
   let(:submit_form_id) { SUBMIT_FORM_ID }
+  let(:upload_form_id) { UPLOAD_FORM_ID }
+  let(:upload_field_ids) { [UPLOAD_FIELD_IDS] }
+  let(:logo_path) { LOGO_PATH }
   let(:create_field_form_id) { CREATE_FIELD_FORM_ID }
   let(:submission_details_id) { SUBMISSION_DETAILS_ID }
   let(:submission_details_form_id) { SUBMISSION_DETAILS_FORM_ID }
@@ -213,7 +217,23 @@ RSpec.describe Formstack::API do
       expect{wrapper.submit_form(submit_form_id, field_ids, field_values)}.to raise_exception('Field IDs must be numeric')
     end
 
-    it 'uploads'
+    it 'uploads an image' do
+      logo_data = File.open(logo_path, 'rb') { |file| file.read }
+      upload_field_values = [[logo_data, 'fs-logo.png']]
+
+      upload_field_values.each_with_index do |field, idx|
+        upload_field_values[idx] = "#{upload_field_values[idx][1]};#{Base64.encode64(field[0])}"
+      end
+
+      response = wrapper.submit_form(upload_form_id, upload_field_ids, upload_field_values)
+
+      expect(response['data']).not_to be_empty
+
+      response['data'].each_with_index do |row, idx|
+        expect(row['field'].to_i).to eq(upload_field_ids[idx])
+        expect(row['value']).not_to be_empty
+      end
+    end
   end
 
   describe '#get_submission_details', :vcr do
