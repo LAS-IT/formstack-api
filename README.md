@@ -3,7 +3,11 @@ Status](https://travis-ci.org/LAS-IT/formstack-api.svg)](https://travis-ci.org/L
 
 # Formstack::Api
 
-TODO: Write a gem description
+This is a Ruby Wrapper for the Formstack API V2. Be aware that it's still under
+development so methods can be changed or deprecated. As soon as the project is
+stable the version number will be bumped to 1.0.0
+
+Please open up an issue if you have any question or requests.
 
 ## Installation
 
@@ -21,11 +25,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    require 'formstack-api'
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/formstack-api/fork )
+1. Fork it ( https://github.com/LAS-IT/formstack-api/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
