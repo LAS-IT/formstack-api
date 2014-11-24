@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.formstack.com/api/v2/form/1881378/field.json
+    uri: https://www.formstack.com/api/v2/form/<FORM_FIELDS_ID>/field.json
     body:
       encoding: US-ASCII
       string: ''
@@ -17,7 +17,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 24 Nov 2014 13:10:18 GMT
+      - Mon, 24 Nov 2014 13:17:26 GMT
       Content-Type:
       - application/json; charset=UTF-8
       Content-Length:
@@ -28,7 +28,7 @@ http_interactions:
       - CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI
         DSP COR"
       Set-Cookie:
-      - FormstackAdmin=vke6tqt1s9ghfifkuck4tprfu4; path=/api/; secure; HttpOnly
+      - FormstackAdmin=4ln4vl6k68mk99a528o61400t4; path=/api/; secure; HttpOnly
       Cache-Control:
       - no-cache
       X-Robots-Tag:
@@ -37,5 +37,5 @@ http_interactions:
       encoding: UTF-8
       string: '[{"id":"28906371","label":"Short Answer","hide_label":"0","description":null,"name":"short_answer","type":"text","options":"","default":"","required":"0","uniq":"0","hidden":"0","readonly":"0","colspan":"1","sort":"0","text_size":50}]'
     http_version: 
-  recorded_at: Mon, 24 Nov 2014 13:10:17 GMT
+  recorded_at: Mon, 24 Nov 2014 13:17:25 GMT
 recorded_with: VCR 2.9.3
