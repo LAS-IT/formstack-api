@@ -2,49 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.formstack.com/api/v2/form/<FORM_ID>/field.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Authorization:
-      - Bearer <ACCESS_TOKEN>
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Mon, 24 Nov 2014 13:00:04 GMT
-      Content-Type:
-      - application/json; charset=UTF-8
-      Content-Length:
-      - '3522'
-      Connection:
-      - keep-alive
-      P3p:
-      - CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI
-        DSP COR"
-      Set-Cookie:
-      - FormstackAdmin=nmde0stigoi8ks84hfrh2er3a3; path=/api/; secure; HttpOnly
-      Cache-Control:
-      - no-cache
-      X-Robots-Tag:
-      - noindex, nofollow
-    body:
-      encoding: UTF-8
-      string: '[{"id":"<EDIT_SUBMISSION_FIELD_ID>","label":"Short Answer","hide_label":"0","description":null,"name":"short_answer","type":"text","options":"","default":"","required":"0","uniq":"0","hidden":"0","readonly":"0","colspan":"1","sort":"0","text_size":50},{"id":"28706107","label":"Name","hide_label":"0","description":null,"name":"name","type":"name","options":"","default":"","required":"0","uniq":"0","hidden":"0","readonly":"0","colspan":"1","sort":"1","show_initial":0,"show_middle":0,"show_prefix":0,"show_suffix":0,"text_size":20},{"id":"28706112","label":"Long
-        Answer","hide_label":"0","description":null,"name":"long_answer","type":"textarea","options":"","default":"","required":"0","uniq":"0","hidden":"0","readonly":"0","colspan":"1","sort":"2","rows":10,"cols":50},{"id":"28730178","label":"","hide_label":"0","description":null,"name":"","type":"text","options":"","default":"","required":"0","uniq":"0","hidden":"0","readonly":"0","colspan":"1","sort":"3","text_size":50},{"id":"28730202","label":"","hide_label":"0","description":null,"name":"","type":"text","options":"","default":"","required":"0","uniq":"0","hidden":"0","readonly":"0","colspan":"1","sort":"4","text_size":50},{"id":"28730218","label":"","hide_label":"0","description":null,"name":"","type":"text","options":"","default":"","required":"0","uniq":"0","hidden":"0","readonly":"0","colspan":"1","sort":"5","text_size":50},{"id":"28730222","label":"","hide_label":"0","description":null,"name":"","type":"text","options":"","default":"","required":"0","uniq":"0","hidden":"0","readonly":"0","colspan":"1","sort":"6","text_size":50},{"id":"28730289","label":"","hide_label":"0","description":null,"name":"","type":"text","options":"","default":"","required":"0","uniq":"0","hidden":"0","readonly":"0","colspan":"1","sort":"7","text_size":50},{"id":"28730316","label":"","hide_label":"0","description":null,"name":"","type":"text","options":"","default":"","required":"0","uniq":"0","hidden":"0","readonly":"0","colspan":"1","sort":"8","text_size":50},{"id":"28730483","label":"","hide_label":"0","description":null,"name":"","type":"text","options":"","default":"","required":"0","uniq":"0","hidden":"0","readonly":"0","colspan":"1","sort":"9","text_size":50},{"id":"28730484","label":"Test
-        Field 20141114T1515","hide_label":"0","description":null,"name":"test_field_20141114t1515","type":"text","options":"","default":"","required":"0","uniq":"0","hidden":"0","readonly":"0","colspan":"1","sort":"10","text_size":50},{"id":"28730487","label":"Test
-        Field 2014-11-14 15:15:16 +0100","hide_label":"0","description":null,"name":"test_field_20141114_151516_0100","type":"text","options":"","default":"","required":"0","uniq":"0","hidden":"0","readonly":"0","colspan":"1","sort":"11","text_size":50},{"id":"28730489","label":"Test
-        Field 2014-11-14 15:15:30 +0100","hide_label":"0","description":null,"name":"test_field_20141114_151530_0100","type":"text","options":"","default":"","required":"0","uniq":"0","hidden":"0","readonly":"0","colspan":"1","sort":"12","text_size":50},{"id":"28731003","label":"Test
-        Field 2014-11-14 15:18:19 +0100","hide_label":"0","description":null,"name":"test_field_20141114_151819_0100","type":"text","options":"","default":"","required":"0","uniq":"0","hidden":"0","readonly":"0","colspan":"1","sort":"13","text_size":50},{"id":"28731004","label":"","hide_label":"0","description":null,"name":"","type":"embed","options":"","default":"","required":"0","uniq":"0","hidden":"0","readonly":"0","colspan":"1","sort":"14","section_text":""}]'
-    http_version: 
-  recorded_at: Mon, 24 Nov 2014 13:00:03 GMT
-- request:
-    method: get
     uri: https://www.formstack.com/api/v2/form/1881378/field.json
     body:
       encoding: US-ASCII
@@ -60,7 +17,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 24 Nov 2014 13:05:13 GMT
+      - Mon, 24 Nov 2014 13:10:18 GMT
       Content-Type:
       - application/json; charset=UTF-8
       Content-Length:
@@ -71,7 +28,7 @@ http_interactions:
       - CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI
         DSP COR"
       Set-Cookie:
-      - FormstackAdmin=m9kk799bq200fhorfq3qba4vh5; path=/api/; secure; HttpOnly
+      - FormstackAdmin=vke6tqt1s9ghfifkuck4tprfu4; path=/api/; secure; HttpOnly
       Cache-Control:
       - no-cache
       X-Robots-Tag:
@@ -80,5 +37,5 @@ http_interactions:
       encoding: UTF-8
       string: '[{"id":"28906371","label":"Short Answer","hide_label":"0","description":null,"name":"short_answer","type":"text","options":"","default":"","required":"0","uniq":"0","hidden":"0","readonly":"0","colspan":"1","sort":"0","text_size":50}]'
     http_version: 
-  recorded_at: Mon, 24 Nov 2014 13:05:12 GMT
+  recorded_at: Mon, 24 Nov 2014 13:10:17 GMT
 recorded_with: VCR 2.9.3
