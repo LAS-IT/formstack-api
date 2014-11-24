@@ -82,6 +82,12 @@ module Formstack
       request("form/#{form_id}", 'GET');
     end
 
+    def form_fields(form_id)
+      is_numeric?(form_id)
+
+      request("form/#{form_id}/field.json", 'GET');
+    end
+
     def copy_form(form_id)
       is_numeric?(form_id)
 

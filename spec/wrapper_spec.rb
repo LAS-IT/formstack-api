@@ -16,6 +16,7 @@ RSpec.describe Formstack::API do
   let(:submission_details_form_id) { SUBMISSION_DETAILS_FORM_ID }
   let(:edit_submission_field_id) { EDIT_SUBMISSION_FIELD_ID }
   let(:edit_submission_array_field_id) { EDIT_SUBMISSION_ARRAY_FIELD_ID }
+  let(:form_fields_id) { FORM_FIELDS_ID }
 
   subject(:wrapper) { Formstack::API.new(access_token) }
 
@@ -334,6 +335,32 @@ RSpec.describe Formstack::API do
     end
   end
 
+  describe '#form_fields', :vcr do
+    let(:form_fields) { [{"id"=>"28906371",
+                          "label"=>"Short Answer",
+                          "hide_label"=>"0",
+                          "description"=>nil,
+                          "name"=>"short_answer",
+                          "type"=>"text",
+                          "options"=>"",
+                          "default"=>"",
+                          "required"=>"0",
+                          "uniq"=>"0",
+                          "hidden"=>"0",
+                          "readonly"=>"0",
+                          "colspan"=>"1",
+                          "sort"=>"0",
+                          "text_size"=>50}] }
+
+    it 'retrieves all the fields from a form' do
+      fields = wrapper.form_fields(form_fields_id)
+      expect(fields).to eq(form_fields)
+    end
+
+    it 'raises an exception if form id is not numeric' do
+      expect{wrapper.form_fields('fail')}.to raise_exception('Form ID must be numeric')
+    end
+  end
   # describe '#', :vcr => { :record => :all } do
 
   def get_editable_submission_id
