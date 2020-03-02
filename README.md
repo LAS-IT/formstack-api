@@ -1,5 +1,4 @@
-[![Build
-Status](https://travis-ci.org/LAS-IT/formstack-api.svg)](https://travis-ci.org/LAS-IT/formstack-api)
+[![Codeship Status for LAS-IT/formstack-api](https://app.codeship.com/projects/0bddff20-3ec1-0138-e879-06fe3f45f76c/status?branch=master)](https://app.codeship.com/projects/387490)
 
 # Formstack::Api
 
