@@ -69,7 +69,7 @@ GEM
     rspec-support (3.9.2)
     safe_yaml (1.0.5)
     shellany (0.0.1)
-    thor (1.0.1)
+    thor (1.4.0)
     vcr (5.1.0)
     webmock (3.8.2)
       addressable (>= 2.3.6)
